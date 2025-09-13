@@ -4,6 +4,11 @@ import { Dashboard } from "@/components/Dashboard";
 import { Documents } from "@/components/Documents";
 import { Courses } from "@/components/Courses";
 import { AITutor } from "@/components/AITutor";
+import { Assessments } from "@/components/Assessments";
+import { Analytics } from "@/components/Analytics";
+import { Community } from "@/components/Community";
+import { Calendar } from "@/components/Calendar";
+import { LearningProcess } from "@/components/LearningProcess";
 import universityHero from "@/assets/university-hero.jpg";
 
 const Index = () => {
@@ -20,70 +25,15 @@ const Index = () => {
       case 'ai-tutor':
         return <AITutor onSectionChange={setActiveSection} />;
       case 'assessments':
-        return (
-          <div className="space-y-8 animate-fade-in">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold text-foreground mb-4">Smart Assessment Engine 🧠</h1>
-              <p className="text-xl text-muted-foreground">AI-powered adaptive testing coming soon!</p>
-            </div>
-            <div className="bg-gradient-subtle rounded-2xl p-12 text-center">
-              <div className="text-6xl mb-4">🚀</div>
-              <p className="text-muted-foreground">Advanced assessment features in development</p>
-            </div>
-          </div>
-        );
+        return <Assessments onSectionChange={setActiveSection} />;
       case 'analytics':
-        return (
-          <div className="space-y-8 animate-fade-in">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold text-foreground mb-4">Advanced Learning Analytics 📊</h1>
-              <p className="text-xl text-muted-foreground">Deep insights coming soon!</p>
-            </div>
-            <div className="bg-gradient-subtle rounded-2xl p-12 text-center">
-              <div className="text-6xl mb-4">📈</div>
-              <p className="text-muted-foreground">Comprehensive analytics dashboard in development</p>
-            </div>
-          </div>
-        );
+        return <Analytics onSectionChange={setActiveSection} />;
       case 'community':
-        return (
-          <div className="space-y-8 animate-fade-in">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold text-foreground mb-4">Learning Community 👥</h1>
-              <p className="text-xl text-muted-foreground">Connect and collaborate with fellow students!</p>
-            </div>
-            <div className="bg-gradient-subtle rounded-2xl p-12 text-center">
-              <div className="text-6xl mb-4">🎓</div>
-              <p className="text-muted-foreground">Community features launching soon</p>
-            </div>
-          </div>
-        );
+        return <Community onSectionChange={setActiveSection} />;
       case 'calendar':
-        return (
-          <div className="space-y-8 animate-fade-in">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold text-foreground mb-4">Academic Calendar 📅</h1>
-              <p className="text-xl text-muted-foreground">Stay organized with your schedule!</p>
-            </div>
-            <div className="bg-gradient-subtle rounded-2xl p-12 text-center">
-              <div className="text-6xl mb-4">📅</div>
-              <p className="text-muted-foreground">Interactive calendar coming soon</p>
-            </div>
-          </div>
-        );
+        return <Calendar onSectionChange={setActiveSection} />;
       case 'learning-process':
-        return (
-          <div className="space-y-8 animate-fade-in">
-            <div className="text-center">
-              <h1 className="text-4xl font-bold text-foreground mb-4">AI-Powered Learning Process 🎯</h1>
-              <p className="text-xl text-muted-foreground">Your personalized learning journey!</p>
-            </div>
-            <div className="bg-gradient-subtle rounded-2xl p-12 text-center">
-              <div className="text-6xl mb-4">🎯</div>
-              <p className="text-muted-foreground">Advanced learning path features in development</p>
-            </div>
-          </div>
-        );
+        return <LearningProcess onSectionChange={setActiveSection} />;
       default:
         return <Dashboard onSectionChange={setActiveSection} />;
     }
